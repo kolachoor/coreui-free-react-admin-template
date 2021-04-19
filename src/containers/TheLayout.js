@@ -6,17 +6,18 @@ import {
   TheHeader
 } from './index'
 
-const TheLayout = () => {
+const TheLayout = (props) => {
 
+  console.log(props.api)
   return (
     <div className="c-app c-default-layout">
-      <TheSidebar/>
+      {/* <TheSidebar /> */}
       <div className="c-wrapper">
-        <TheHeader/>
+        <TheHeader />
         <div className="c-body">
-          <TheContent/>
+          <TheContent {...props} />
         </div>
-        <TheFooter/>
+        <TheFooter />
       </div>
     </div>
   )
